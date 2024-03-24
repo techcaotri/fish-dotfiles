@@ -7,3 +7,4 @@ set -g fish_prompt_pwd_dir_length 2
 set -g theme_display_git yes
 set -g theme_display_git_dirty yes
 set -g theme_display_git_untracked yes
+set -g theme_display_git_default_branch yes
