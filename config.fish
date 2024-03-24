@@ -14,4 +14,4 @@ bass source ~/.profile
 bass source ~/.config/nnn/nnn_config.sh
 bass . "$HOME/.cargo/env"
 
-eval "$(jump shell)"
+eval $(jump shell)
