@@ -1,2 +1,2 @@
-alias ls="exa --icons -l -a"
-alias ll="exa --icons -l -a"
+alias ls="eza -o --icons -l -a"
+alias ll="eza -o --icons -l -a"
