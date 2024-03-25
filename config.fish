@@ -7,6 +7,8 @@ function j
   test -d "$dir"  && cd "$dir"
 end
 
+zoxide init fish | source
+
 ## After the Oh-My-Fish inclusion line:
 bass source /etc/profile
 bass source ~/.profile
@@ -15,3 +17,11 @@ bass source ~/.config/nnn/nnn_config.sh
 bass . "$HOME/.cargo/env"
 
 eval $(jump shell)
+
+eval $(tmux set -g default-shell /usr/bin/fish)
+## tmux.fish default configuration
+# fish_tmux_default_session_name main_fish
+
+# Don't auto-connect to Tmux
+set -Ux fish_tmux_autoconnect false
+set -Ux fish_tmux_autostart false
