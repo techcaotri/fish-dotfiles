@@ -1,6 +1,6 @@
 set -g theme_nerd_fonts yes
 set -g theme_color_scheme dark
-set -g theme_display_user ssh
+set -g theme_display_user yes
 set -g theme_newline_cursor yes
 set -g theme_newline_prompt "➜ "
 set -g fish_prompt_pwd_dir_length 2
