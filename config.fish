@@ -25,3 +25,8 @@ eval $(tmux set -g default-shell /usr/bin/fish)
 # Don't auto-connect to Tmux
 set -Ux fish_tmux_autoconnect false
 set -Ux fish_tmux_autostart false
+
+set --universal nvm_default_version v20.11.1
+
+# Generated for envman. Do not edit.
+test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
