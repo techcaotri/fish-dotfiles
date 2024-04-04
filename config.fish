@@ -18,7 +18,6 @@ bass . "$HOME/.cargo/env"
 
 eval $(jump shell)
 
-eval $(tmux set default-shell /bin/bash)
 eval $(tmux set default-command /usr/bin/fish)
 
 ## tmux.fish default configuration
