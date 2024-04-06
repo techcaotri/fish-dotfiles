@@ -18,6 +18,7 @@ bass . "$HOME/.cargo/env"
 
 eval $(jump shell)
 
+eval $(tmux set default-shell /usr/bin/fish)
 eval $(tmux set default-command /usr/bin/fish)
 
 ## tmux.fish default configuration
@@ -31,3 +32,8 @@ set --universal nvm_default_version v20.11.1
 
 # Generated for envman. Do not edit.
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
+
+# Support sdkman.io sdk command copied from https://github.com/sdkman/sdkman-cli/issues/294#issuecomment-241680772
+function sdk
+  bass source ~/.sdkman/bin/sdkman-init.sh --no-use ';' sdk $argv
+end
