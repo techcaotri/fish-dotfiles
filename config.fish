@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+  atuin init fish | source
 end
 
 function j
@@ -37,3 +38,8 @@ test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
 function sdk
   bass source ~/.sdkman/bin/sdkman-init.sh --no-use ';' sdk $argv
 end
+
+# bind to ctrl-r in normal and insert mode, add any other bindings you want here too
+bind \cr _atuin_search
+bind -M insert \cr _atuin_search
+
