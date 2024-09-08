@@ -11,7 +11,8 @@ end
 zoxide init fish | source
 
 ## After the Oh-My-Fish inclusion line:
-bass source /etc/profile
+test -f /etc/lsb-release && bass source /etc/profile
+export MY_FISH_SHELL="true"
 bass source ~/.profile
 
 bass source ~/.config/nnn/nnn_config.sh
