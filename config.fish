@@ -11,7 +11,7 @@ end
 zoxide init fish | source
 
 ## After the Oh-My-Fish inclusion line:
-bass source /etc/profile
+test -f /etc/lsb-release && bass source /etc/profile
 bass source ~/.profile
 
 bass source ~/.config/nnn/nnn_config.sh
@@ -43,3 +43,8 @@ end
 bind \cr _atuin_search
 bind -M insert \cr _atuin_search
 
+# Run daemon
+clipy
+
+# Bind the function to Ctrl+j
+bind  \cj clipy_history
