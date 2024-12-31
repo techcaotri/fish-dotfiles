@@ -44,8 +44,12 @@ end
 bind \cr _atuin_search
 bind -M insert \cr _atuin_search
 
-# Run daemon
-clipy
+function _clipy_history
+  set clipy_output $(clipy history --tmux)  
+  commandline -a "$clipy_output"
+  commandline -C 9999 # Move cursor to the end of the line
+end
 
 # Bind the function to Ctrl+j
-bind  \cj clipy_history
+bind  \e\cf _clipy_history
+bind -M insert \e\cf _clipy_history
