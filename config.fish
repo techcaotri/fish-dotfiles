@@ -39,6 +39,7 @@ test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
 function sdk
   bass source ~/.sdkman/bin/sdkman-init.sh --no-use ';' sdk $argv
 end
+sdk default maven 3.9.9
 
 # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
 bind \cr _atuin_search
@@ -53,3 +54,6 @@ end
 # Bind the function to Ctrl+j
 bind  \e\cf _clipy_history
 bind -M insert \e\cf _clipy_history
+
+# Add shell widget for navi
+navi widget fish | source
