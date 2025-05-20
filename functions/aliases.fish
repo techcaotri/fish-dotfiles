@@ -6,3 +6,4 @@ alias tmux_send_command_to_every_pane="bass source ~/.dotfiles/bash/aliases.sh \
 
 # fzf aliases
 alias fkill="bass source ~/.fzf-extras/fzf-extras.sh \\; fkill"
+alias fkillsu="bass source ~/.fzf-extras/fzf-extras.sh \\; fkillsu"

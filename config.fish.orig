@@ -48,6 +48,8 @@ sdk default maven 3.9.9
 bind \cr _atuin_search
 bind -M insert \cr _atuin_search
 
+<<<<<<< HEAD
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /home/tripham/anaconda3/bin/conda
@@ -61,6 +63,8 @@ else
 end
 # <<< conda initialize <<<
 
+# Add config for navi
+=======
 function _clipy_history
   set clipy_output $(clipy history --tmux)  
   commandline -a "$clipy_output"
@@ -71,5 +75,6 @@ end
 bind  \e\cf _clipy_history
 bind -M insert \e\cf _clipy_history
 
-# Add config for navi
+# Add shell widget for navi
+>>>>>>> 24fe25ece04eee4aa51837a3a19f6c8f58a0c930
 navi widget fish | source
