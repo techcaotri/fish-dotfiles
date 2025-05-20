@@ -8,6 +8,9 @@ function j
   test -d "$dir"  && cd "$dir"
 end
 
+# Set color theme to "cappucin-mocha"
+set -g theme_color_scheme catpuccin-mocha
+
 zoxide init fish | source
 
 ## After the Oh-My-Fish inclusion line:
@@ -43,3 +46,19 @@ end
 bind \cr _atuin_search
 bind -M insert \cr _atuin_search
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/tripham/anaconda3/bin/conda
+    eval /home/tripham/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/tripham/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/home/tripham/anaconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/tripham/anaconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+# Add config for navi
+navi widget fish | source
