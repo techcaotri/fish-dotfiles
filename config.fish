@@ -33,7 +33,7 @@ eval $(tmux set default-command /usr/bin/fish)
 set -Ux fish_tmux_autoconnect false
 set -Ux fish_tmux_autostart false
 
-set --universal nvm_default_version v20.11.1
+set --universal nvm_default_version v22.17.1
 
 # Generated for envman. Do not edit.
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
@@ -49,13 +49,13 @@ bind -M insert \cr _atuin_search
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/tripham/anaconda3/bin/conda
-    eval /home/tripham/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /home/tripham/miniconda3/bin/conda
+    eval /home/tripham/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/tripham/anaconda3/etc/fish/conf.d/conda.fish"
-        . "/home/tripham/anaconda3/etc/fish/conf.d/conda.fish"
+    if test -f "/home/tripham/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/tripham/miniconda3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/tripham/anaconda3/bin" $PATH
+        set -x PATH "/home/tripham/miniconda3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
