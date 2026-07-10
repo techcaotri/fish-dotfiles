@@ -1,6 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-  atuin init fish | source
+    # Guarded so a missing/old atuin on either Ubuntu box doesn't abort startup.
+    type -q atuin && atuin init fish | source
 end
 
 function j
@@ -11,7 +12,7 @@ end
 # Set color theme to "cappucin-mocha"
 set -g theme_color_scheme catpuccin-mocha
 
-zoxide init fish | source
+type -q zoxide && zoxide init fish | source
 
 ## After the Oh-My-Fish inclusion line:
 test -f /etc/lsb-release && bass source /etc/profile
@@ -21,10 +22,17 @@ bass source ~/.profile
 bass source ~/.config/nnn/nnn_config.sh
 bass . "$HOME/.cargo/env"
 
-eval $(jump shell)
+# Pin the shell explicitly: `jump shell` alone auto-detects from $SHELL, so during
+# `reload` (which runs `bash -i -c "exec fish"`) it can emit bash integration that
+# fish then fails to eval. `jump shell fish | source` is the form jump itself recommends.
+type -q jump && jump shell fish | source
 
-eval $(tmux set default-shell /usr/bin/fish)
-eval $(tmux set default-command /usr/bin/fish)
+# These set global tmux options, so they only make sense once a tmux server exists.
+# Running them outside tmux contacts/spawns a server on every fish startup — guard on $TMUX.
+if set -q TMUX; and type -q tmux
+    tmux set default-shell /usr/bin/fish
+    tmux set default-command /usr/bin/fish
+end
 
 ## tmux.fish default configuration
 # fish_tmux_default_session_name main_fish
@@ -72,4 +80,4 @@ bind  \e\cf _clipy_history
 bind -M insert \e\cf _clipy_history
 
 # Add config for navi
-navi widget fish | source
+type -q navi && navi widget fish | source
