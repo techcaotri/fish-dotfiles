@@ -27,5 +27,5 @@ SETUVAR _fisher_qiuxiang_2F_flutter_2D_fish_2D_completions_files:\x7e/\x2econfig
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR --export fish_tmux_autoconnect:false
 SETUVAR --export fish_tmux_autostart:false
-SETUVAR fish_user_paths:/home/tripham/Dev/Playground_Terminal/fzf/bin
+SETUVAR fish_user_paths:/Users/tripham/Dev/Playground_Terminal/fzf/bin
 SETUVAR nvm_default_version:v22\x2e17\x2e1

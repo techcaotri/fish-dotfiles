@@ -1,1 +1,1 @@
-set -g __sdkman_custom_dir /home/tripham/.sdkman/
+set -g __sdkman_custom_dir /Users/tripham/.sdkman/

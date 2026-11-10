@@ -50,7 +50,7 @@ test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
 function sdk
   bass source ~/.sdkman/bin/sdkman-init.sh --no-use ';' sdk $argv
 end
-bass source "/home/tripham/.sdkman/bin/sdkman-init.sh"
+bass source "/Users/tripham/.sdkman/bin/sdkman-init.sh"
 
 # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
 bind \cr _atuin_search
@@ -58,13 +58,13 @@ bind -M insert \cr _atuin_search
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/tripham/miniconda3/bin/conda
-    eval /home/tripham/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /Users/tripham/miniconda3/bin/conda
+    eval /Users/tripham/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/tripham/miniconda3/etc/fish/conf.d/conda.fish"
-        . "/home/tripham/miniconda3/etc/fish/conf.d/conda.fish"
+    if test -f "/Users/tripham/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/tripham/miniconda3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/tripham/miniconda3/bin" $PATH
+        set -x PATH "/Users/tripham/miniconda3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
@@ -84,4 +84,4 @@ type -q navi && navi widget fish | source
 
 
 # Added by Antigravity CLI installer
-set -gx PATH "/home/tripham/.local/bin" $PATH
+set -gx PATH "/Users/tripham/.local/bin" $PATH

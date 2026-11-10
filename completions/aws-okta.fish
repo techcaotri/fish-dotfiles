@@ -1,1 +1,0 @@
-/home/tripham/Dev/Playground_Fish_Script/Study_Fish_autocomplete/aws-okta-step-1.fish

@@ -52,13 +52,13 @@ bind -M insert \cr _atuin_search
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if test -f /home/tripham/anaconda3/bin/conda
-    eval /home/tripham/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /Users/tripham/anaconda3/bin/conda
+    eval /Users/tripham/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 else
-    if test -f "/home/tripham/anaconda3/etc/fish/conf.d/conda.fish"
-        . "/home/tripham/anaconda3/etc/fish/conf.d/conda.fish"
+    if test -f "/Users/tripham/anaconda3/etc/fish/conf.d/conda.fish"
+        . "/Users/tripham/anaconda3/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/home/tripham/anaconda3/bin" $PATH
+        set -x PATH "/Users/tripham/anaconda3/bin" $PATH
     end
 end
 # <<< conda initialize <<<
